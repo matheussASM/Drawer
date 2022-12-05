@@ -1,15 +1,14 @@
-import { Posts } from '../../types/types';
+import { Cards } from '../../types/types';
 import './style.css'
 
-export const Task = (post:Posts) => {
+export const Task = (card:Cards) => {
     return(
-        <div key={post.id} className="item-container-list">
-            <p>Num:{post.id}</p>
-            <h3>{post.title}</h3>
-            <p>Tags:SGM</p>
-            <p>Date:11/08/2022</p>
-            <p>Detail:Icon</p>
-            <p>Owner:Matheus</p>
+        <div key={card.id} className="item-container-list">
+            <p>{card.id}</p>
+            <h3>{card.title}</h3>
+            <p>{card.createdAt}</p>
+            <p>{card.hasDetail? "Icon": ""}</p>
+            <p>{card.owner}</p>
         </div>
     );
 };
